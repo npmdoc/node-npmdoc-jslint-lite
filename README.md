@@ -1,11 +1,13 @@
-# api documentation for  [jslint-lite (v2017.2.27)](https://github.com/kaizhu256/node-jslint-lite)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jslint-lite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jslint-lite)
-#### this zero-dependency package will provide browser-compatible versions of jslint and csslint
+# api documentation for  [jslint-lite (v2017.4.6)](https://github.com/kaizhu256/node-jslint-lite)  [![npm package](https://img.shields.io/npm/v/npmdoc-jslint-lite.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-jslint-lite) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-jslint-lite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-jslint-lite)
+#### this zero-dependency package will provide browser-compatible, classic-versions of jslint and csslint
 
 [![NPM](https://nodei.co/npm/jslint-lite.png?downloads=true)](https://www.npmjs.com/package/jslint-lite)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-jslint-lite/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-jslint_lite_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-jslint-lite/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-jslint-lite/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-jslint-lite%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-jslint-lite/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-jslint-lite/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-jslint-lite/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-jslint-lite/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -25,15 +27,15 @@
         "url": "https://github.com/kaizhu256/node-jslint-lite/issues"
     },
     "dependencies": {},
-    "description": "this zero-dependency package will provide browser-compatible versions of jslint and csslint",
+    "description": "this zero-dependency package will provide browser-compatible, classic-versions of jslint and csslint",
     "devDependencies": {
         "electron-lite": "github:kaizhu256/node-electron-lite#alpha",
         "utility2": "github:kaizhu256/node-utility2#alpha"
     },
     "directories": {},
     "dist": {
-        "shasum": "04fe4decb91cbe48b5663cb67db8f03e4e44418b",
-        "tarball": "https://registry.npmjs.org/jslint-lite/-/jslint-lite-2017.2.27.tgz"
+        "shasum": "4e8e60b7aae80083310d73efa1ae23e70f3d9a61",
+        "tarball": "https://registry.npmjs.org/jslint-lite/-/jslint-lite-2017.4.6.tgz"
     },
     "engines": {
         "node": ">=4.0"
@@ -58,6 +60,7 @@
     ],
     "name": "jslint-lite",
     "nameAlias": "jslint",
+    "nameAliasPublish": "es5lint jslint-classic",
     "nameOriginal": "jslint-lite",
     "optionalDependencies": {},
     "os": [
@@ -65,20 +68,20 @@
         "linux"
     ],
     "readme": "ERROR: No README data found!",
+    "readmeParse": "1",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kaizhu256/node-jslint-lite.git"
     },
     "scripts": {
-        "build-ci": "utility2 shRun shReadmeBuild",
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
         "env": "env",
-        "heroku-postbuild": "npm install 'kaizhu256/node-utility2#alpha' && utility2 shRun shDeployHeroku",
-        "postinstall": "if [ -f lib.jslint.npm-scripts.sh ]; then ./lib.jslint.npm-scripts.sh postinstall; fi",
-        "publish-alias": "VERSION=$(npm info $npm_package_name version); for ALIAS in es5lint es6lint jslint_lite; do utility2 shRun shNpmPublishAs . $ALIAS $VERSION; utility2 shRun shNpmTestPublished $ALIAS || exit $?; done",
-        "start": "export PORT=${PORT:-8080} && export npm_config_mode_auto_restart=1 && utility2 shRun shIstanbulCover test.js",
-        "test": "export PORT=$(utility2 shServerPortRandom) && utility2 test test.js"
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "2017.2.27"
+    "version": "2017.4.6"
 }
 ```
 
@@ -96,6 +99,7 @@
 1.  object <span class="apidocSignatureSpan">jslint-lite.</span>CSSLint._Reporter.prototype
 1.  object <span class="apidocSignatureSpan">jslint-lite.</span>jslint
 1.  object <span class="apidocSignatureSpan">jslint-lite.</span>local
+1.  object <span class="apidocSignatureSpan">jslint-lite.</span>module
 1.  string <span class="apidocSignatureSpan">jslint-lite.</span>__dirname
 1.  string <span class="apidocSignatureSpan">jslint-lite.</span>modeJs
 
