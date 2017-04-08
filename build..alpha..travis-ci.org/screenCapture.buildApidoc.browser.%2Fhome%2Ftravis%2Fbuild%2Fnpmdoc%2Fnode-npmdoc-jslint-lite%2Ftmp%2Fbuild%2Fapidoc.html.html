@@ -1,0 +1,1425 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/kaizhu256/node-jslint-lite">jslint-lite (v2017.4.6)</a>
+</h1>
+<h4>this zero-dependency package will provide browser-compatible, classic-versions of jslint and csslint</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jslint-lite">module jslint-lite</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter">
+            function <span class="apidocSignatureSpan">jslint-lite.</span>CSSLint._Reporter
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT">
+            function <span class="apidocSignatureSpan">jslint-lite.</span>JSLINT
+            <span class="apidocSignatureSpan">(t, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.jslintAndPrint">
+            function <span class="apidocSignatureSpan">jslint-lite.</span>jslintAndPrint
+            <span class="apidocSignatureSpan">(script, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.jslintEs6">
+            function <span class="apidocSignatureSpan">jslint-lite.</span>jslintEs6
+            <span class="apidocSignatureSpan">(e, i, s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.</span>CSSLint</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.</span>CSSLint.Util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.</span>CSSLint._Reporter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.</span>jslint</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.</span>local</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.</span>module</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jslint-lite.</span>__dirname</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jslint-lite.CSSLint">module jslint-lite.CSSLint</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>_Reporter
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.addFormatter">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>addFormatter
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.addRule">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>addRule
+            <span class="apidocSignatureSpan">(t )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.clearRules">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>clearRules
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.format">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>format
+            <span class="apidocSignatureSpan">(e, t, n, r)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.getFormatter">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>getFormatter
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.getRules">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>getRules
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.getRuleset">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>getRuleset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.hasFormat">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>hasFormat
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.verify">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>verify
+            <span class="apidocSignatureSpan">(t, r)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>Util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>_listeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jslint-lite.CSSLint.Util">module jslint-lite.CSSLint.Util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.Util.forEach">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.Util.</span>forEach
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.Util.indexOf">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.Util.</span>indexOf
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint.Util.mix">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.Util.</span>mix
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jslint-lite.CSSLint._Reporter">module jslint-lite.CSSLint._Reporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter._Reporter">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>_Reporter
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jslint-lite.CSSLint._Reporter.prototype">module jslint-lite.CSSLint._Reporter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.constructor">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.error">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>error
+            <span class="apidocSignatureSpan">(e, t, n, r )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.info">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>info
+            <span class="apidocSignatureSpan">(e, t, n, r)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.report">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>report
+            <span class="apidocSignatureSpan">(e, t , n, r)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.rollupError">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>rollupError
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.rollupWarn">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>rollupWarn
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.stat">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>stat
+            <span class="apidocSignatureSpan">(e, t)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.warn">
+            function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>warn
+            <span class="apidocSignatureSpan">(e, t, n, r)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.jslint-lite.JSLINT">module jslint-lite.JSLINT</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.JSLINT">
+            function <span class="apidocSignatureSpan">jslint-lite.</span>JSLINT
+            <span class="apidocSignatureSpan">(t, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.color">
+            function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>color
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.data">
+            function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>data
+            <span class="apidocSignatureSpan">( )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.error_report">
+            function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>error_report
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.jslint">
+            function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>jslint
+            <span class="apidocSignatureSpan">(t, n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.properties_report">
+            function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>properties_report
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.jslint-lite.JSLINT.report">
+            function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>report
+            <span class="apidocSignatureSpan">(e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>edition</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jslint-lite" id="apidoc.module.jslint-lite">module jslint-lite</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter" id="apidoc.element.jslint-lite.CSSLint._Reporter">
+        function <span class="apidocSignatureSpan">jslint-lite.</span>CSSLint._Reporter
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(e, t){this.messages=
+[],this.stats=[],this.lines=e,this.ruleset=t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT" id="apidoc.element.jslint-lite.JSLINT">
+        function <span class="apidocSignatureSpan">jslint-lite.</span>JSLINT
+        <span class="apidocSignatureSpan">(t, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSLINT = function (t, n){var r,o,u;S.errors=[],S.tree="",S.properties="",i=P=X=O=Object
+.create(W["(begin)"]),V=[],_=Object.create(null),st(U),H=Object.create(null);if(
+n){M=Object.create(n),o=M.predef;if(o)if(Array.isArray(o))for(r=0;r&lt;o.length;r+=1
+)_[o[r]]=!0;else typeof o=="object"&amp;&amp;st(o)}else M=Object.create(null);M.indent=+
+M.indent||4,M.maxerr=+M.maxerr||50,b=q=Object.create(null),y=m={scope:q,loopage:0
+,level:0},g=[m],s=[],f=[],l=!1,w=!1,E=null,x=!1,C=[],L=!1,D=!0,z=!1,$=null,J=0,T
+.init(t),ot();try{dt();if(O.id==="(number)")O.stop("unexpected_a");else switch(O
+.id){case"{":case"[":l=!0,x=!0,ln();break;default:bt(1),O.id===";"&amp;&amp;!L&amp;&amp;(O.edge=!0
+,dt(";")),u=tn(),i.first=u,S.tree=i,u.disrupt&amp;&amp;P.warn("weird_program")}E=null,dt
+("(end)"),S.property=H}catch(a){a&amp;&amp;S.errors.push({reason:a.message,line:a.line||
+O.line,character:a.character||O.from},null)}return S.errors.length===0}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                '\u001b[90m \/\/ Line ' + (error.line + 1) +
+                ', Pos ' + (error.column + 1) + '\u001b[39m\n';
+        });
+// jslint es5 script
+} else {
+    // comment shebang
+    scriptParsed = scriptParsed.replace((/^#!/), '//');
+    if (local.<span class="apidocCodeKeywordSpan">JSLINT</span>(scriptParsed)) {
+        return script;
+    }
+    // if error occurred, then print colorized error messages
+    local.errorText = '\n\u001b[1m' + file + '\u001b[22m\n';
+    local.JSLINT.errors
+        .filter(function (error) {
+            return error;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.jslintAndPrint" id="apidoc.element.jslint-lite.jslintAndPrint">
+        function <span class="apidocSignatureSpan">jslint-lite.</span>jslintAndPrint
+        <span class="apidocSignatureSpan">(script, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jslintAndPrint = function (script, file) {
+<span class="apidocCodeCommentSpan">/*
+ * this function will jslint / csslint the script and print any errors to stderr
+ */
+</span>    var ignoreDict, lineno, scriptParsed;
+    // cleanup errors
+    local.errorCounter = 0;
+    local.errorText = '';
+    // do nothing for empty script
+    if (!script.length) {
+        return script;
+    }
+    // init ignoreDict
+    ignoreDict = {};
+    // init lineno
+    lineno = 0;
+    // parse script
+    scriptParsed = script
+        // indent text-block
+        // /* jslint-indent-begin */ ... /* jslint-indent-end */
+        .replace(
+/* jslint-indent-begin 20 */
+(function () {
+    /*jslint maxlen: 256*/
+    return (/^ *?\/\* jslint-indent-begin (\d+?) \*\/$[\S\s]+?^ *?\/\* jslint-indent-end \*\/$/gm);
+}()),
+/* jslint-indent-end */
+            function (match0, match1) {
+                return match0.replace(
+                    (/(^ *\S)/gm),
+                    new Array(Number(match1) + 1).join(' ') + '$1'
+                );
+            }
+        )
+        // ignore text-block
+        // /* jslint-ignore-begin */ ... /* jslint-ignore-end */
+        .replace(
+/* jslint-ignore-begin */
+(/^ *?\/\* jslint-ignore-begin \*\/$[\S\s]+?^ *?\/\* jslint-ignore-end \*\/$/gm),
+/* jslint-ignore-end */
+            function (match0) {
+                return match0.replace((/.*/g), '');
+            }
+        )
+        // ignore next-line
+        // /* jslint-ignore-next-line */
+        .replace(
+/* jslint-ignore-next-line */
+(/^ *?\/\* jslint-ignore-next-line \*\/\n.*/gm),
+            function (match0) {
+                return match0.replace((/.*/g), '');
+            }
+        );
+    // csslint script
+    if (file.slice(-4) === '.css') {
+        scriptParsed = scriptParsed.replace(new RegExp([
+            // handle flexbox
+            ' display: flex;',
+            ' flex: .+?;',
+            ' flex-.+?: .+?;'
+        ].join('|'), 'g'), function () {
+            return ' background: url(' + Math.random() + ');';
+        });
+        local.CSSLint.errors = local.CSSLint.verify(scriptParsed).messages
+            .filter(function (error) {
+                return !ignoreDict[error.rule.id];
+            });
+        // if error occurred, then print colorized error messages
+        if (!local.CSSLint.errors.length) {
+            return script;
+        }
+        local.errorText = '\n\u001b[1m' + file + '\u001b[22m\n';
+        local.CSSLint.errors
+            .filter(function (error) {
+                return error;
+            })
+            .forEach(function (error) {
+                local.errorCounter += 1;
+                lineno += 1;
+                local.errorText +=
+                    (' #' + String(lineno) + ' ').slice(-4) +
+                    '\u001b[33m' + error.type + ' - ' + error.rule.id +
+                    ' - ' + error.message + '\n    ' + error.rule.desc +
+                    '\u001b[39m\n    ' + String(error.evidence).trim() +
+                    '\u001b[90m \/\/ line ' + error.line +
+                    ', col ' + error.col + '\u001b[39m\n';
+            });
+    // jslint es6-script
+    } else if ((/^\/\*jslint\b[\s\w,:]*?\bes6: true\b/m)
+            .test(scriptParsed.slice(0, 0x1000))) {
+        // comment shebang
+        scriptParsed = scriptParsed.replace((/^#!/), '//');
+        local.jslintEs6.errors = local.jslintEs6(scriptParsed).warnings;
+        if (!local.jslintEs6.errors.length) {
+            return script;
+        }
+        // if error occurred, then print colorized error messages
+        local.errorText = '\n\u001b[1m' + file + '\u001b[22m\n';
+        local.jslintEs6.errors
+            .filter(function (error) {
+                return error;
+            })
+            .forEach(function (error) {
+                local.errorCounter += 1;
+                lineno += 1;
+                local.errorText +=
+                    (' #' + String(lineno) + ' ').slice(-4) +
+                    '\u001b[33m' + error.message +
+                    '\u001b[39m\n    ' + String(error.a).trim() +
+                    '\u001b[90m \/\/ Line ' + (error.line + 1) +
+                    ', Pos ' + (error.column + 1) + '\u001 ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        document.querySelector('#testReportDiv1').style.display = 'none';
+        document.querySelector('#testRunButton1').textContent = 'run internal test';
+    }
+    break;
+// custom-case
+default:
+    // jslint #inputTextareaEval1
+    local.jslint.<span class="apidocCodeKeywordSpan">jslintAndPrint</span>(
+        document.querySelector('#inputTextareaEval1').value,
+        'inputTextareaEval1.js'
+    );
+    document.querySelector('#outputPreJslint1').textContent =
+        local.jslint.errorText
+        .replace((/\u001b\[\d+m/g), '')
+        .trim();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.jslintEs6" id="apidoc.element.jslint-lite.jslintEs6">
+        function <span class="apidocSignatureSpan">jslint-lite.</span>jslintEs6
+        <span class="apidocSignatureSpan">(e, i, s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jslintEs6 = function (e, i, s){try{ft=[],Y=i||t(),H="anonymous",j=[],F=t(),q=!0,I=[],R=!0,U=t(
+),z=[],W=Y.fudge?1:0,V=[],$={id:"(global)",body:!0,context:t(),from:0,level:0,line
+:0,live:[],loop:0,"switch":0,thru:0},B=$,X=$,J=!1,et=!1,Q=!1,G=$,Z=t(),tt=[],ot=
+undefined,rt=$,it=0,at=undefined,n(F,a,!1),s!==undefined&amp;&amp;n(F,s,!1),Object.keys(
+Y).forEach(function(e){if(Y[e]===!0){var t=r[e];Array.isArray(t)&amp;&amp;n(F,t,!1)}}),gt
+(e),Et(),J?(ut=St(),Et("(end)")):(Y.browser?G.id===";"&amp;&amp;Et(";"):G.value==="use strict"&amp;&amp;
+($.strict=G,Et("(string)"),Et(";")),ut=Ot(),Et("(end)"),X=$,on(ut),Q&amp;&amp;$.strict!==
+undefined&amp;&amp;vt("unexpected_a",$.strict),gn(),Y.white||yn()),Y.browser||I.forEach(
+function(e){e.directive==="global"&amp;&amp;vt("missing_browser",e)}),R=!1}catch(o){o.name!=="JSLintError"&amp;&amp;
+ft.push(o)}return{directives:I,edition:"2016-10-24",exports:U,froms:z,functions:
+V,global:$,id:"(JSLint)",json:J,lines:K,module:Q===!0,ok:ft.length===0&amp;&amp;!R,option
+:Y,property:Z,stop:R,tokens:st,tree:ut,warnings:ft.sort(function(e,t){return e.line-
+t.line||e.column-t.column})}}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                ', col ' + error.col + '\u001b[39m\n';
+        });
+// jslint es6-script
+} else if ((/^\/\*jslint\b[\s\w,:]*?\bes6: true\b/m)
+        .test(scriptParsed.slice(0, 0x1000))) {
+    // comment shebang
+    scriptParsed = scriptParsed.replace((/^#!/), '//');
+    local.jslintEs6.errors = local.<span class="apidocCodeKeywordSpan">jslintEs6</span>(scriptParsed).warnings;
+    if (!local.jslintEs6.errors.length) {
+        return script;
+    }
+    // if error occurred, then print colorized error messages
+    local.errorText = '\n\u001b[1m' + file + '\u001b[22m\n';
+    local.jslintEs6.errors
+        .filter(function (error) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jslint-lite.CSSLint" id="apidoc.module.jslint-lite.CSSLint">module jslint-lite.CSSLint</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter" id="apidoc.element.jslint-lite.CSSLint._Reporter">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>_Reporter
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(e, t){this.messages=
+[],this.stats=[],this.lines=e,this.ruleset=t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.addFormatter" id="apidoc.element.jslint-lite.CSSLint.addFormatter">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>addFormatter
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addFormatter = function (e){
+t[e.id]=e}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+({id:"checkstyle-xml",name:"Checkstyle XML format",startFormat:function(){return'&lt;?xml version="
+;1.0" encoding="utf-8"?&gt;&lt;checkstyle&gt;'
+},endFormat:function(){return"&lt;/checkstyle&gt;"},readError:function(t,n){return'&lt;file name="'
+;+
+e(t)+'"&gt;&lt;error line="0" column="0" severty="error" message="'+e(n)+&amp;#
+x27;"&gt;&lt;/error&gt;&lt;/file&gt;'
+},formatResults:function(t,n,r){var i=t.messages,s=[],o=function(e){return!!e&amp;&amp;"name"in
+e?"net.csslint."+e.name.replace(/\s/g,""):""};return i.length&gt;0&amp;&amp;(s.push('&lt;
+;file name="'+
+n+'"&gt;'),CSSLint.Util.forEach(i,function(t,n){t.rollup||s.push('&lt;error line="'+t.
+line+'" column="'+t.col+'" severity="'+t.type+'"'+' message="&amp;#
+x27;+e(t.message)+'" source="'+
+o(t.rule)+'"/&gt;')}),s.push("&lt;/file&gt;")),s.join("")}})}(),CSSLint.<span class="apidocCodeKeywordSpan
+">addFormatter</span>({id:"compact"
+,name:"Compact, 'porcelain' format",startFormat:function(){return""},endFormat:function(
+){return""},formatResults:function(e,t,n){var r=e.messages,i="";n=n||{};var s=function(
+e){return e.charAt(0).toUpperCase()+e.slice(1)};return r.length===0?n.quiet?"":t+": Lint Free!"
+:(CSSLint.Util.forEach(r,function(e,n){e.rollup?i+=t+": "+s(e.type)+" - "+e.message+"\n"
+:i+=t+": "+"line "+e.line+", col "+e.col+", "+s(e.type)+" - "+e.message+"\n"}),i
+)}}),CSSLint.addFormatter({id:"csslint-xml",name:"CSSLint XML format",startFormat
+:function(){return'&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;csslint&gt;'},endFormat
+:function(
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.addRule" id="apidoc.element.jslint-lite.CSSLint.addRule">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>addRule
+        <span class="apidocSignatureSpan">(t )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRule = function (t ){e.push(t),e[t.id]=t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.push({type:"info",line:t,col:n,message:e,evidence:this.lines[t-1],rule:r})},rollupError
+:function(e,t){this.messages.push({type:"error",rollup:!0,message:e,rule:t})},rollupWarn
+:function(e,t){this.messages.push({type:"warning",rollup:!0,message:e,rule:t})},
+stat:function(e,t){this.stats[e]=t}},CSSLint._Reporter=Reporter,CSSLint.Util={mix
+:function(e,t){var n;for(n in t)t.hasOwnProperty(n)&amp;&amp;(e[n]=t[n]);return n},indexOf
+:function(e,t){if(e.indexOf)return e.indexOf(t);for(var n=0,r=e.length;n&lt;r;n++)if(
+e[n]===t)return n;return-1},forEach:function(e,t){if(e.forEach)return e.forEach(
+t);for(var n=0,r=e.length;n&lt;r;n++)t(e[n],n,e)}},CSSLint.<span class="apidocCodeKeywordSpan">addRule</span>({id:"adjoining
+-classes"
+,name:"Disallow adjoining classes",desc:"Don't use adjoining classes.",browsers:"IE6"
+,init:function(e,t){var n=this;e.addListener("startrule",function(r){var i=r.selectors
+,s,o,u,a,f,l,c;for(f=0;f&lt;i.length;f++){s=i[f];for(l=0;l&lt;s.parts.length;l++){o=s.
+parts[l];if(o.type==e.SELECTOR_PART_TYPE){a=0;for(c=0;c&lt;o.modifiers.length;c++)u=
+o.modifiers[c],u.type=="class"&amp;&amp;a++,a&gt;1&amp;&amp;t.report("Don't use adjoining classes."
+;
+,o.line,o.col,n)}}}})}}),CSSLint.addRule({id:"box-model",name:"Beware of broken box size"
+,desc:"Don't use width or height when using padding or border.",browsers:"All",init
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.clearRules" id="apidoc.element.jslint-lite.CSSLint.clearRules">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>clearRules
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clearRules = function (){e=[]}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.format" id="apidoc.element.jslint-lite.CSSLint.format">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>format
+        <span class="apidocSignatureSpan">(e, t, n, r)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (e, t, n, r){var i=
+this.getFormatter(n),s=null;return i&amp;&amp;(s=i.startFormat(),s+=i.formatResults(e,t,
+r||{}),s+=i.endFormat()),s}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.getFormatter" id="apidoc.element.jslint-lite.CSSLint.getFormatter">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>getFormatter
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFormatter = function (e){return t[e]}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+:0,2:2,1:1,0:0},s.toLowerCase().split(",").forEach(function(e){var n=e.split(":"
+),i=n[0]||"",s=n[1]||"";t[i.trim()]=r[s.trim()]})),t}var e=[],t=[],n=/\/\*csslint([^\*]*)\*\//
+,r=new parserlib.util.EventTarget;return r.version="0.10.0",r.addRule=function(t
+){e.push(t),e[t.id]=t},r.clearRules=function(){e=[]},r.getRules=function(){return[
+].concat(e).sort(function(e,t){return e.id&gt;t.id?1:0})},r.getRuleset=function(){var t=
+{},n=0,r=e.length;while(n&lt;r)t[e[n++].id]=1;return t},r.addFormatter=function(e){
+t[e.id]=e},r.getFormatter=function(e){return t[e]},r.format=function(e,t,n,r){var i=
+this.<span class="apidocCodeKeywordSpan">getFormatter</span>(n),s=null;return i&amp;&amp;(s=i.startFormat(),s+=i.formatResults
+(e,t,
+r||{}),s+=i.endFormat()),s},r.hasFormat=function(e){return t.hasOwnProperty(e)},
+r.verify=function(t,r){var s=0,o=e.length,u,a,f,l=new parserlib.css.Parser({starHack
+:!0,ieFilters:!0,underscoreHack:!0,strict:!1});a=t.replace(/\n\r?/g,"$split$").split
+("$split$"),r||(r=this.getRuleset()),n.test(t)&amp;&amp;(r=i(t,r)),u=new Reporter(a,r),r
+.errors=2;for(s in r)r.hasOwnProperty(s)&amp;&amp;r[s]&amp;&amp;e[s]&amp;&amp;e[s].init(l,u);try{l.parse
+(t)}catch(c){u.error("Fatal error, cannot continue: "+c.message,c.line,c.col,{})
+}return f={messages:u.messages,stats:u.stats,ruleset:u.ruleset},f.messages.sort(
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.getRules" id="apidoc.element.jslint-lite.CSSLint.getRules">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>getRules
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRules = function (){return[
+].concat(e).sort(function(e,t){return e.id&gt;t.id?1:0})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.getRuleset" id="apidoc.element.jslint-lite.CSSLint.getRuleset">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>getRuleset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRuleset = function (){var t=
+{},n=0,r=e.length;while(n&lt;r)t[e[n++].id]=1;return t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+].concat(e).sort(function(e,t){return e.id&gt;t.id?1:0})},r.getRuleset=function(){var t=
+{},n=0,r=e.length;while(n&lt;r)t[e[n++].id]=1;return t},r.addFormatter=function(e){
+t[e.id]=e},r.getFormatter=function(e){return t[e]},r.format=function(e,t,n,r){var i=
+this.getFormatter(n),s=null;return i&amp;&amp;(s=i.startFormat(),s+=i.formatResults(e,t,
+r||{}),s+=i.endFormat()),s},r.hasFormat=function(e){return t.hasOwnProperty(e)},
+r.verify=function(t,r){var s=0,o=e.length,u,a,f,l=new parserlib.css.Parser({starHack
+:!0,ieFilters:!0,underscoreHack:!0,strict:!1});a=t.replace(/\n\r?/g,"$split$").split
+("$split$"),r||(r=this.<span class="apidocCodeKeywordSpan">getRuleset</span>()),n.test(t)&amp;&amp;(r=i(t,r)),u=new
+Reporter(a,r),r
+.errors=2;for(s in r)r.hasOwnProperty(s)&amp;&amp;r[s]&amp;&amp;e[s]&amp;&amp;e[s].init(l,u);try{l.parse
+(t)}catch(c){u.error("Fatal error, cannot continue: "+c.message,c.line,c.col,{})
+}return f={messages:u.messages,stats:u.stats,ruleset:u.ruleset},f.messages.sort(
+function(e,t){return e.rollup&amp;&amp;!t.rollup?1:!e.rollup&amp;&amp;t.rollup?-1:e.line-t.line}
+),f},r}();return Reporter.prototype={constructor:Reporter,error:function(e,t,n,r
+){this.messages.push({type:"error",line:t,col:n,message:e,evidence:this.lines[t-1
+],rule:r||{}})},warn:function(e,t,n,r){this.report(e,t,n,r)},report:function(e,t
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.hasFormat" id="apidoc.element.jslint-lite.CSSLint.hasFormat">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>hasFormat
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasFormat = function (e){return t.hasOwnProperty(e)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.verify" id="apidoc.element.jslint-lite.CSSLint.verify">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>verify
+        <span class="apidocSignatureSpan">(t, r)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verify = function (t, r){var s=0,o=e.length,u,a,f,l=new parserlib.css.Parser({starHack
+:!0,ieFilters:!0,underscoreHack:!0,strict:!1});a=t.replace(/\n\r?/g,"$split$").split
+("$split$"),r||(r=this.getRuleset()),n.test(t)&amp;&amp;(r=i(t,r)),u=new Reporter(a,r),r
+.errors=2;for(s in r)r.hasOwnProperty(s)&amp;&amp;r[s]&amp;&amp;e[s]&amp;&amp;e[s].init(l,u);try{l.parse
+(t)}catch(c){u.error("Fatal error, cannot continue: "+c.message,c.line,c.col,{})
+}return f={messages:u.messages,stats:u.stats,ruleset:u.ruleset},f.messages.sort(
+function(e,t){return e.rollup&amp;&amp;!t.rollup?1:!e.rollup&amp;&amp;t.rollup?-1:e.line-t.line}
+),f}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // handle flexbox
+    ' display: flex;',
+    ' flex: .+?;',
+    ' flex-.+?: .+?;'
+].join('|'), 'g'), function () {
+    return ' background: url(' + Math.random() + ');';
+});
+local.CSSLint.errors = local.CSSLint.<span class="apidocCodeKeywordSpan">verify</span>(scriptParsed).messages
+    .filter(function (error) {
+        return !ignoreDict[error.rule.id];
+    });
+// if error occurred, then print colorized error messages
+if (!local.CSSLint.errors.length) {
+    return script;
+}
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jslint-lite.CSSLint.Util" id="apidoc.module.jslint-lite.CSSLint.Util">module jslint-lite.CSSLint.Util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.Util.forEach" id="apidoc.element.jslint-lite.CSSLint.Util.forEach">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.Util.</span>forEach
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forEach = function (e, t){if(e.forEach)return e.forEach(
+t);for(var n=0,r=e.length;n&lt;r;n++)t(e[n],n,e)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    event.currentTarget &amp;&amp;
+    event.currentTarget.className &amp;&amp;
+    event.currentTarget.className.includes &amp;&amp;
+    event.currentTarget.className.includes('onreset'))) {
+// reset output
+Array.from(
+    document.querySelectorAll('body &gt; .resettable')
+).<span class="apidocCodeKeywordSpan">forEach</span>(function (element) {
+    switch (element.tagName) {
+    case 'INPUT':
+    case 'TEXTAREA':
+        element.value = '';
+        break;
+    default:
+        element.textContent = '';
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.Util.indexOf" id="apidoc.element.jslint-lite.CSSLint.Util.indexOf">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.Util.</span>indexOf
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">indexOf = function (e, t){if(e.indexOf)return e.indexOf(t);for(var n=0,r=e.length;n&lt;r;n++)if(
+e[n]===t)return n;return-1}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+mark:function(){this._bookmark={cursor:this._cursor,line:this._line,col:this._col
+}},reset:function(){this._bookmark&amp;&amp;(this._cursor=this._bookmark.cursor,this._line=
+this._bookmark.line,this._col=this._bookmark.col,delete this._bookmark)},readTo:
+function(e){var t="",n;while(t.length&lt;e.length||t.lastIndexOf(e)!=t.length-e.length
+){n=this.read();if(!n)throw new Error('Expected "'+e+'" at line '+this._line+", col "+
+this._col+".");t+=n}return t},readWhile:function(e){var t="",n=this.read();while(
+n!==null&amp;&amp;e(n))t+=n,n=this.read();return t},readMatch:function(e){var t=this._input
+.substring(this._cursor),n=null;return typeof e=="string"?t.<span class="apidocCodeKeywordSpan">indexOf</span>(e)===0&amp;#
+x26;&amp;(n=this
+.readCount(e.length)):e instanceof RegExp&amp;&amp;e.test(t)&amp;&amp;(n=this.readCount(RegExp.lastMatch
+.length)),n},readCount:function(e){var t="";while(e--)t+=this.read();return t}},
+n.prototype=new Error,r.fromToken=function(e){return new r(e.value,e.startLine,e
+.startCol)},r.prototype={constructor:r,valueOf:function(){return this.toString()
+},toString:function(){return this.text}},i.createTokenData=function(e){var t=[],
+n={},r=e.concat([]),i=0,s=r.length+1;r.UNKNOWN=-1,r.unshift({name:"EOF"});for(;i&lt;
+s;i++)t.push(r[i].name),r[r[i].name]=i,r[i].text&amp;&amp;(n[r[i].text]=i);return r.name=
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint.Util.mix" id="apidoc.element.jslint-lite.CSSLint.Util.mix">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.Util.</span>mix
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mix = function (e, t){var n;for(n in t)t.hasOwnProperty(n)&amp;&amp;(e[n]=t[n]);return n}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jslint-lite.CSSLint._Reporter" id="apidoc.module.jslint-lite.CSSLint._Reporter">module jslint-lite.CSSLint._Reporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter._Reporter" id="apidoc.element.jslint-lite.CSSLint._Reporter._Reporter">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint.</span>_Reporter
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(e, t){this.messages=
+[],this.stats=[],this.lines=e,this.ruleset=t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jslint-lite.CSSLint._Reporter.prototype" id="apidoc.module.jslint-lite.CSSLint._Reporter.prototype">module jslint-lite.CSSLint._Reporter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.constructor" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.constructor">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Reporter(e, t){this.messages=
+[],this.stats=[],this.lines=e,this.ruleset=t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.error" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.error">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>error
+        <span class="apidocSignatureSpan">(e, t, n, r )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (e, t, n, r ){this.messages.push({type:"error",line:t,col:n,message:e,evidence:this.lines[t-1
+],rule:r||{}})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            event.currentTarget.className.includes &amp;&amp;
+            event.currentTarget.className.includes('oneval')))) {
+        // try to eval input-code
+        try {
+            /*jslint evil: true*/
+            eval(document.querySelector('#inputTextareaEval1').value);
+        } catch (errorCaught) {
+            console.<span class="apidocCodeKeywordSpan">error</span>(errorCaught.stack);
+        }
+    }
+};
+// log stderr and stdout to #outputTextareaStdout1
+['error', 'log'].forEach(function (key) {
+    console[key + '_original'] = console[key];
+    console[key] = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.info" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.info">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>info
+        <span class="apidocSignatureSpan">(e, t, n, r)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (e, t, n, r){this.messages
+.push({type:"info",line:t,col:n,message:e,evidence:this.lines[t-1],rule:r})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.report" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.report">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>report
+        <span class="apidocSignatureSpan">(e, t , n, r)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">report = function (e, t , n, r){this.messages.push({type:this.ruleset[r.id]==2?"error":"warning",line:t,col
+:n,message:e,evidence:this.lines[t-1],rule:r})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+("$split$"),r||(r=this.getRuleset()),n.test(t)&amp;&amp;(r=i(t,r)),u=new Reporter(a,r),r
+.errors=2;for(s in r)r.hasOwnProperty(s)&amp;&amp;r[s]&amp;&amp;e[s]&amp;&amp;e[s].init(l,u);try{l.parse
+(t)}catch(c){u.error("Fatal error, cannot continue: "+c.message,c.line,c.col,{})
+}return f={messages:u.messages,stats:u.stats,ruleset:u.ruleset},f.messages.sort(
+function(e,t){return e.rollup&amp;&amp;!t.rollup?1:!e.rollup&amp;&amp;t.rollup?-1:e.line-t.line}
+),f},r}();return Reporter.prototype={constructor:Reporter,error:function(e,t,n,r
+){this.messages.push({type:"error",line:t,col:n,message:e,evidence:this.lines[t-1
+],rule:r||{}})},warn:function(e,t,n,r){this.<span class="apidocCodeKeywordSpan">report</span>(e,t,n,r)},report:function(e,t
+,n,r){this.messages.push({type:this.ruleset[r.id]==2?"error":"warning",line:t,col
+:n,message:e,evidence:this.lines[t-1],rule:r})},info:function(e,t,n,r){this.messages
+.push({type:"info",line:t,col:n,message:e,evidence:this.lines[t-1],rule:r})},rollupError
+:function(e,t){this.messages.push({type:"error",rollup:!0,message:e,rule:t})},rollupWarn
+:function(e,t){this.messages.push({type:"warning",rollup:!0,message:e,rule:t})},
+stat:function(e,t){this.stats[e]=t}},CSSLint._Reporter=Reporter,CSSLint.Util={mix
+:function(e,t){var n;for(n in t)t.hasOwnProperty(n)&amp;&amp;(e[n]=t[n]);return n},indexOf
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.rollupError" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.rollupError">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>rollupError
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rollupError = function (e, t){this.messages.push({type:"error",rollup:!0,message:e,rule:t})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.rollupWarn" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.rollupWarn">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>rollupWarn
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rollupWarn = function (e, t){this.messages.push({type:"warning",rollup:!0,message:e,rule:t})}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+a&lt;l)u[a].type=="color"&amp;&amp;("alpha"in u[a]||"hue"in u[a]?(/([^\)]+)\(/.test(u[a])&amp;
+;&amp;
+(f=RegExp.$1.toUpperCase()),(!r||r.property.text.toLowerCase()!=o||r.colorType!="compat"
+)&amp;&amp;t.report("Fallback "+o+" (hex or RGB) should precede "+f+" "+o+".",e.line,e
+.col
+,n)):e.colorType="compat"),a++;r=e})}}),CSSLint.addRule({id:"floats",name:"Disallow too many floats"
+;
+,desc:"This rule tests if the float property is used too many times",browsers:"All"
+,init:function(e,t){var n=this,r=0;e.addListener("property",function(e){e.property
+.text.toLowerCase()=="float"&amp;&amp;e.value.text.toLowerCase()!="none"&amp;&amp;r++}),e.addListener
+("endstylesheet",function(){t.stat("floats",r),r&gt;=10&amp;&amp;t.<span class="apidocCodeKeywordSpan">rollupWarn
+</span>("Too many floats ("+
+r+"), you're probably using them for layout. Consider using a grid system instead."
+,n)})}}),CSSLint.addRule({id:"font-faces",name:"Don't use too many web fonts",desc
+:"Too many different web fonts in the same stylesheet.",browsers:"All",init:function(
+e,t){var n=this,r=0;e.addListener("startfontface",function(){r++}),e.addListener
+("endstylesheet",function(){r&gt;5&amp;&amp;t.rollupWarn("Too many @font-face declarations ("+
+r+").",n)})}}),CSSLint.addRule({id:"font-sizes",name:"Disallow too many font sizes"
+,desc:"Checks the number of font-size declarations.",browsers:"All",init:function(
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.stat" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.stat">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>stat
+        <span class="apidocSignatureSpan">(e, t)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stat = function (e, t){this.stats[e]=t}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+a&lt;l)u[a].type=="color"&amp;&amp;("alpha"in u[a]||"hue"in u[a]?(/([^\)]+)\(/.test(u[a])&amp;
+;&amp;
+(f=RegExp.$1.toUpperCase()),(!r||r.property.text.toLowerCase()!=o||r.colorType!="compat"
+)&amp;&amp;t.report("Fallback "+o+" (hex or RGB) should precede "+f+" "+o+".",e.line,e
+.col
+,n)):e.colorType="compat"),a++;r=e})}}),CSSLint.addRule({id:"floats",name:"Disallow too many floats"
+;
+,desc:"This rule tests if the float property is used too many times",browsers:"All"
+,init:function(e,t){var n=this,r=0;e.addListener("property",function(e){e.property
+.text.toLowerCase()=="float"&amp;&amp;e.value.text.toLowerCase()!="none"&amp;&amp;r++}),e.addListener
+("endstylesheet",function(){t.<span class="apidocCodeKeywordSpan">stat</span>("floats",r),r&gt;=10&amp;&amp;#
+x26;t.rollupWarn("Too many floats ("+
+r+"), you're probably using them for layout. Consider using a grid system instead."
+,n)})}}),CSSLint.addRule({id:"font-faces",name:"Don't use too many web fonts",desc
+:"Too many different web fonts in the same stylesheet.",browsers:"All",init:function(
+e,t){var n=this,r=0;e.addListener("startfontface",function(){r++}),e.addListener
+("endstylesheet",function(){r&gt;5&amp;&amp;t.rollupWarn("Too many @font-face declarations ("+
+r+").",n)})}}),CSSLint.addRule({id:"font-sizes",name:"Disallow too many font sizes"
+,desc:"Checks the number of font-size declarations.",browsers:"All",init:function(
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.CSSLint._Reporter.prototype.warn" id="apidoc.element.jslint-lite.CSSLint._Reporter.prototype.warn">
+        function <span class="apidocSignatureSpan">jslint-lite.CSSLint._Reporter.prototype.</span>warn
+        <span class="apidocSignatureSpan">(e, t, n, r)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">warn = function (e, t, n, r){this.report(e,t,n,r)}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+),M.rhino&amp;&amp;(st(I),M.rhino=!1)}function ut(e){return e||(e=O),e.id==="(number)"?e
+.number:e.string}function at(e,t,n){throw{name:"JSLintError",line:t,character:n,
+message:u.scanned_a_b.supplant({a:u[e]||e,b:Math.floor(t/N.length*100)})}}function ft
+(e,t,n,r,i,s,o){var a={id:"(error)",raw:u[e]||e,code:e,evidence:N[t-1]||"",line:
+t,character:n,a:r||ut(this),b:i,c:s,d:o};return a.reason=a.raw.supplant(a),S.errors
+.push(a),M.passfail&amp;&amp;at("stopping",t,n),J+=1,J&gt;=M.maxerr&amp;&amp;at("too_many",t,n),a}function
+ lt
+(e,t,n,r,i,s,o){var u=ft(e,t,n,r,i,s,o);at("stopping",u.line,u.character)}function ct
+(e){!M.white&amp;&amp;O.from!==e&amp;&amp;O.<span class="apidocCodeKeywordSpan">warn</span>("expected_a_at_b_c",&amp;#
+x22;",e,O.from)}function ht(e,
+t){var n=t.string,r=q[n];t.dead=!1,t.init=!1,t.kind=e,t.master=r,t.used=0,t.writeable=!0
+,e==="var"&amp;&amp;m===y?r||(_[n]===!1&amp;&amp;(t.writeable=!1),b[n]=t):(r&amp;&amp;(r.function===m?(r
+.kind!=="exception"||e!=="exception"||!r.dead)&amp;&amp;t.warn("already_defined",n):r.function!==
+y&amp;&amp;e==="var"&amp;&amp;t.warn("redefinition_a_b",n,r.line)),q[n]=t,e==="var"&amp;&amp;
+;s.push(n))}
+function pt(e){var t,n=0;e=e||0;while(n&lt;=e)t=C[n],t||(t=C[n]=T.token()),n+=1;return t
+}function dt(e,t){if(E){if($&amp;&amp;O.line!==X.line){if(($!==E||!O.edge)&amp;&amp;O.from===E.at-
+(O.edge?M.indent:0)){var r=E;for(;;){r.at-=M.indent;if(r===$)break;r=r.was}r.open=!1
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.jslint-lite.JSLINT" id="apidoc.module.jslint-lite.JSLINT">module jslint-lite.JSLINT</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.JSLINT" id="apidoc.element.jslint-lite.JSLINT.JSLINT">
+        function <span class="apidocSignatureSpan">jslint-lite.</span>JSLINT
+        <span class="apidocSignatureSpan">(t, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JSLINT = function (t, n){var r,o,u;S.errors=[],S.tree="",S.properties="",i=P=X=O=Object
+.create(W["(begin)"]),V=[],_=Object.create(null),st(U),H=Object.create(null);if(
+n){M=Object.create(n),o=M.predef;if(o)if(Array.isArray(o))for(r=0;r&lt;o.length;r+=1
+)_[o[r]]=!0;else typeof o=="object"&amp;&amp;st(o)}else M=Object.create(null);M.indent=+
+M.indent||4,M.maxerr=+M.maxerr||50,b=q=Object.create(null),y=m={scope:q,loopage:0
+,level:0},g=[m],s=[],f=[],l=!1,w=!1,E=null,x=!1,C=[],L=!1,D=!0,z=!1,$=null,J=0,T
+.init(t),ot();try{dt();if(O.id==="(number)")O.stop("unexpected_a");else switch(O
+.id){case"{":case"[":l=!0,x=!0,ln();break;default:bt(1),O.id===";"&amp;&amp;!L&amp;&amp;(O.edge=!0
+,dt(";")),u=tn(),i.first=u,S.tree=i,u.disrupt&amp;&amp;P.warn("weird_program")}E=null,dt
+("(end)"),S.property=H}catch(a){a&amp;&amp;S.errors.push({reason:a.message,line:a.line||
+O.line,character:a.character||O.from},null)}return S.errors.length===0}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                '\u001b[90m \/\/ Line ' + (error.line + 1) +
+                ', Pos ' + (error.column + 1) + '\u001b[39m\n';
+        });
+// jslint es5 script
+} else {
+    // comment shebang
+    scriptParsed = scriptParsed.replace((/^#!/), '//');
+    if (local.<span class="apidocCodeKeywordSpan">JSLINT</span>(scriptParsed)) {
+        return script;
+    }
+    // if error occurred, then print colorized error messages
+    local.errorText = '\n\u001b[1m' + file + '\u001b[22m\n';
+    local.JSLINT.errors
+        .filter(function (error) {
+            return error;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.color" id="apidoc.element.jslint-lite.JSLINT.color">
+        function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>color
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">color = function (e){var t,n=1,r,i,s=[],o,u=e.tokens[0];
+while(u&amp;&amp;u.id!=="(end)"){t=u.from,i=u.line,o=u.thru,r=u.function.level;do o=u.thru
+,u=e.tokens[n],n+=1;while(u&amp;&amp;u.line===i&amp;&amp;u.from-o&lt;5&amp;&amp;r===u.function.level);s.push
+({line:i,level:r,from:t,thru:o})}return s}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.data" id="apidoc.element.jslint-lite.JSLINT.data">
+        function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>data
+        <span class="apidocSignatureSpan">( )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">data = function ( ){function s(e){var n=i[e].kind;switch(n){case"var":case"exception":case"label":
+t[n].push(e)}}var e={functions:[]},t,n,r,i;e.errors=S.errors,e.json=x,e.global=cn
+(Object.keys(b));for(n=1;n&lt;g.length;n+=1)r=g[n],t={name:r.name,line:r.line,level
+:r.level,parameter:r.parameter,"var":[],exception:[],closure:cn(r.closure),outer
+:cn(r.outer),global:cn(r.global),label:[]},i=r.scope,Object.keys(i).forEach(s),t
+.var.sort(),t.exception.sort(),t.label.sort(),e.functions.push(t);return e.tokens=
+V,e}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.error_report" id="apidoc.element.jslint-lite.JSLINT.error_report">
+        function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>error_report
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error_report = function (e){var t,n,r=[],i;if(e.errors.length){e.json&amp;&amp;r.push
+("&lt;cite&gt;JSON: bad.&lt;/cite&gt;&lt;br&gt;");for(n=0;n&lt;e.errors.length;n+=1)i=e.errors[n],i&amp;&amp;
+(t=i.evidence||"",r.push("&lt;cite&gt;"),isFinite(i.line)&amp;&amp;r.push("&lt;address&gt;line "+String
+(i.line)+" character "+String(i.character)+"&lt;/address&gt;"),r.push(i.reason.entityify
+()+"&lt;/cite&gt;"),t&amp;&amp;r.push("&lt;pre&gt;"+t.entityify()+"&lt;/pre&gt;"))}return r.join("")}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.jslint" id="apidoc.element.jslint-lite.JSLINT.jslint">
+        function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>jslint
+        <span class="apidocSignatureSpan">(t, n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jslint = function (t, n){var r,o,u;S.errors=[],S.tree="",S.properties="",i=P=X=O=Object
+.create(W["(begin)"]),V=[],_=Object.create(null),st(U),H=Object.create(null);if(
+n){M=Object.create(n),o=M.predef;if(o)if(Array.isArray(o))for(r=0;r&lt;o.length;r+=1
+)_[o[r]]=!0;else typeof o=="object"&amp;&amp;st(o)}else M=Object.create(null);M.indent=+
+M.indent||4,M.maxerr=+M.maxerr||50,b=q=Object.create(null),y=m={scope:q,loopage:0
+,level:0},g=[m],s=[],f=[],l=!1,w=!1,E=null,x=!1,C=[],L=!1,D=!0,z=!1,$=null,J=0,T
+.init(t),ot();try{dt();if(O.id==="(number)")O.stop("unexpected_a");else switch(O
+.id){case"{":case"[":l=!0,x=!0,ln();break;default:bt(1),O.id===";"&amp;&amp;!L&amp;&amp;(O.edge=!0
+,dt(";")),u=tn(),i.first=u,S.tree=i,u.disrupt&amp;&amp;P.warn("weird_program")}E=null,dt
+("(end)"),S.property=H}catch(a){a&amp;&amp;S.errors.push({reason:a.message,line:a.line||
+O.line,character:a.character||O.from},null)}return S.errors.length===0}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.properties_report" id="apidoc.element.jslint-lite.JSLINT.properties_report">
+        function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>properties_report
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">properties_report = function (e){if(!
+e)return"";var t,n,r=Object.keys(e).sort(),i="   ",s,o=!1,u=["/*properties"];for(
+t=0;t&lt;r.length;t+=1)n=r[t],e[n]&gt;0&amp;&amp;(o&amp;&amp;(i+=","),s=G.test(n)?n:"'"+n.replace(et,it
+)+"'",i.length+s.length&gt;=80?(u.push(i),i="    "):i+=" ",i+=s,o=!0);return u.push
+(i,"*/\n"),u.join("\n")}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.jslint-lite.JSLINT.report" id="apidoc.element.jslint-lite.JSLINT.report">
+        function <span class="apidocSignatureSpan">jslint-lite.JSLINT.</span>report
+        <span class="apidocSignatureSpan">(e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">report = function (e){function u(e,t){var n=!1;t.length&amp;&amp;(s.push("&lt;dt&gt;"+e+"&lt;/dt&gt;&lt;dd&gt;"),t.forEach
+(function(e){s.push((n?", ":"")+e),n=!0}),s.push("&lt;/dd&gt;"))}var t,n,r,i,s=[],o;s.
+push("&lt;dl class=level0&gt;"),e.global.length?(u("global",e.global),t=!0):e.json?e.errors
+.length||s.push("&lt;dt&gt;JSON: good.&lt;/dt&gt;"):s.push("&lt;dt&gt;&lt;i&gt;No new global variables introduced.&lt;/i&gt;&lt;/dt&gt;"
+),t?s.push("&lt;/dl&gt;"):s[0]="";if(e.functions)for(n=0;n&lt;e.functions.length;n+=1){o=
+e.functions[n],i=[];if(o.params)for(r=0;r&lt;o.params.length;r+=1)i[r]=o.params[r].
+string;s.push("&lt;dl class=level"+o.level+"&gt;&lt;address&gt;line "+String(o.line)+"&lt;/address&gt;"+
+o.name.entityify()),u("parameter",o.parameter),u("variable",o.var),u("exception"
+,o.exception),u("closure",o.closure),u("outer",o.outer),u("global",o.global),u("label"
+,o.label),s.push("&lt;/dl&gt;")}return s.join("")}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+("$split$"),r||(r=this.getRuleset()),n.test(t)&amp;&amp;(r=i(t,r)),u=new Reporter(a,r),r
+.errors=2;for(s in r)r.hasOwnProperty(s)&amp;&amp;r[s]&amp;&amp;e[s]&amp;&amp;e[s].init(l,u);try{l.parse
+(t)}catch(c){u.error("Fatal error, cannot continue: "+c.message,c.line,c.col,{})
+}return f={messages:u.messages,stats:u.stats,ruleset:u.ruleset},f.messages.sort(
+function(e,t){return e.rollup&amp;&amp;!t.rollup?1:!e.rollup&amp;&amp;t.rollup?-1:e.line-t.line}
+),f},r}();return Reporter.prototype={constructor:Reporter,error:function(e,t,n,r
+){this.messages.push({type:"error",line:t,col:n,message:e,evidence:this.lines[t-1
+],rule:r||{}})},warn:function(e,t,n,r){this.<span class="apidocCodeKeywordSpan">report</span>(e,t,n,r)},report:function(e,t
+,n,r){this.messages.push({type:this.ruleset[r.id]==2?"error":"warning",line:t,col
+:n,message:e,evidence:this.lines[t-1],rule:r})},info:function(e,t,n,r){this.messages
+.push({type:"info",line:t,col:n,message:e,evidence:this.lines[t-1],rule:r})},rollupError
+:function(e,t){this.messages.push({type:"error",rollup:!0,message:e,rule:t})},rollupWarn
+:function(e,t){this.messages.push({type:"warning",rollup:!0,message:e,rule:t})},
+stat:function(e,t){this.stats[e]=t}},CSSLint._Reporter=Reporter,CSSLint.Util={mix
+:function(e,t){var n;for(n in t)t.hasOwnProperty(n)&amp;&amp;(e[n]=t[n]);return n},indexOf
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
